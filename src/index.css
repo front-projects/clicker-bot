@@ -1,0 +1,92 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-800";
+  src: url("/fonts/Gilroy-Extrabold.eot");
+  src:
+    local("Gilroy Extrabold"),
+    url("/fonts/Gilroy-Extrabold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Extrabold.woff") format("woff"),
+    url("/fontsGilroy-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-900";
+  src: url("/fonts/Gilroy-Heavy.eot");
+  src:
+    local("Gilroy Heavy"),
+    url("/fonts/Gilroy-Heavy.woff2") format("woff2"),
+    url("/fonts/Gilroy-Heavy.woff") format("woff"),
+    url("/fonts/Gilroy-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: #32363c;
+  background-color: #edf1f4;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+main {
+  background-image: url("/main-bg.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+}
+
+@media screen and (max-height:640px) {
+  #faq-section, #game-section, #profile-section, #navigation{
+    scale: .9;
+  }
+}
+
+
+@keyframes floatUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-130px);
+	}
+}
+
+.floating-text {
+	position: absolute;
+	animation: floatUp 2s forwards;
+	pointer-events: none;
+}
